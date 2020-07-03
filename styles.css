@@ -54,13 +54,19 @@ body {
 }
 
 .wrapper-text {
+	display: none;
 	position: absolute;
-	z-index: 2;
+	z-index: 99;
 	margin: auto;
-	top: 50%;
+
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%ы, -50%);
 	overflow: hidden;
+	transition: transform 1500ms linear;
+}
+.js-text-anim {
+	display: block;
+	top: 50%;
 }
 .slider__img-text {
 	font-size: 38px;
@@ -76,15 +82,32 @@ body {
 .slider__btn {
 	position: absolute;
 	z-index: 4;
-	width: 200px;
-	height: auto;
-	font-size: 18px;
+	border: none;
+	padding: 0;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	background-color: rgba(26, 188, 156, 0);
+
+	transform: scale(1);
+	transition: transform 200ms linear;
+}
+.slider__btn:hover,
+.slider__btn:focus {
+	transform: scale(1.1);
 }
 .btn--left {
+	background-image: url(./img/left.png);
+	background-position: center;
+	background-repeat: no-repeat;
 	top: 300px;
 	left: 200px;
 }
+
 .btn--right {
+	background-image: url(./img/right-arrow.png);
+	background-position: center;
+	background-repeat: no-repeat;
 	top: 300px;
 	right: 200px;
 }
