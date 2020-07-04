@@ -1,6 +1,7 @@
 const refs = {
 	btn: document.querySelector(".js-btn-event"),
 	slider: document.querySelectorAll(".js-slider"),
+	text: document.querySelector(".js-text-anim"),
 };
 refs.btn.addEventListener("click", nextSlid);
 
@@ -26,3 +27,16 @@ function nextSlid(event) {
 function addClassName(id) {
 	refs.slider[id].classList.add("display-none");
 }
+
+setInterval(() => {
+	addClassName(id);
+	id += 1;
+	if (id >= refs.slider.length) {
+		id = 0;
+	} else if (id < 0) {
+		id = 4;
+	}
+	const nextSlide = refs.slider[id];
+
+	nextSlide.classList.remove("display-none");
+}, 4000);

@@ -54,20 +54,13 @@ body {
 }
 
 .wrapper-text {
-	display: none;
 	position: absolute;
 	z-index: 99;
-	margin: auto;
-
-	left: 50%;
-	transform: translate(-50%ы, -50%);
-	overflow: hidden;
-	transition: transform 1500ms linear;
-}
-.js-text-anim {
-	display: block;
 	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
+
 .slider__img-text {
 	font-size: 38px;
 	color: #ffffff;
@@ -79,6 +72,7 @@ body {
 	font-size: 38px;
 	color: #00eeff;
 }
+
 .slider__btn {
 	position: absolute;
 	z-index: 4;
